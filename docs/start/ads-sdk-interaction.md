@@ -42,8 +42,8 @@ The following events are supported:
 
 \* Only relevant for video ads
 
-### Showing multiple ads 
-If you wish to show more than one ad on your app, you can easily do so by creating multiple instances of `OwAd`. Just make sure you pass a different container element for each instance.
+### Multiple ad placements 
+If you have more than one ad placement on your app, you can easily do so by creating multiple instances of `OwAd`. Just make sure you pass a different container element for each instance.
 
 
 ## Checking the window state change
@@ -62,7 +62,7 @@ As we mentioned above, when you change a window state (minimize, hide, restore),
 
 That means if your in-game window contains an Ad, and the containing GAME WINDOW is minimized/restored, you will not be able to know when to call **removeAd()** and **refreshAd()**. 
 
-If you want to handle that scenario, you can listen to [onGameInfoUpdated](../api/overwolf-games#ongameinfoupdated) event and stop the ad if **gameInfo.isInFocus** is false, and refresh it when **gameInfo.isInFocus** changes to *true*.  (note that LoL might have different behavior, so double-check it).
+In order to handle that scenario, you can listen to [onGameInfoUpdated](../api/overwolf-games#ongameinfoupdated) event and stop the ad if **gameInfo.isInFocus** is false, and refresh it when **gameInfo.isInFocus** changes to *true*.  (note that LoL might have different behavior, so double-check it).
 
 ## Ads Type Definitions
 
